@@ -6,7 +6,7 @@ PostgreSQL refresh workshop - postgresql is a modern sql database.
 The aim of this workshop is to:
 
 * ensure psql is installed on your PC,
-* you can create a psql database at [elephantsql.com](elephantsql.com),
+* you can create a PostgreSQL database at [elephantsql.com](http://elephantsql.com) an Cloud PostgreSQL database,
 * and that you can connect to it from your local machine using `psql`,
 * as bonus we will also see if you can (still)  create a psql database locally.
 
@@ -49,7 +49,7 @@ You will need postgresql installed locally see the instructions below to do it
 
 ### Installing Postgres on Windows
 
-Download Postgesql from [this link](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads) and install it.
+Download PostgeSQL version 14 from [this link](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads) and install it.
 
 Specify a password of `pg123` when prompted - this is for the `postgres` user.
 
