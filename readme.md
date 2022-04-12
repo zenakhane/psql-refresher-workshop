@@ -3,14 +3,15 @@
 
 PostgreSQL refresh workshop - postgresql is a modern sql database.
 
-The aim of this workshop is to:
 
-* ensure psql is installed on your PC,
-* you can create a PostgreSQL database at [elephantsql.com](http://elephantsql.com) an Cloud PostgreSQL database,
-* and that you can connect to it from your local machine using `psql`,
-* as bonus we will also see if you can (still)  create a psql database locally.
 
-You should be able to run sql `insert, update, delete & select` queries on the database.
+
+To be able to to this workshop you will need `psql` installed on your PC,
+
+
+You can create use a cloud PostgreSQL database at [elephantsql.com](http://elephantsql.com), you can connect to it from your local machine using `psql`.
+
+Alternatively you can create a local PostgreSQL database.
 
 > *Note:* we assume you already know some SQL but need a bit of a refresher. And yes PostgreSQL might be new to you as well.
 
@@ -42,7 +43,7 @@ npm test
 
 Fix all the failing tests. An refresh your sql knowledge in the process.
 
-You will need postgresql installed locally see the instructions below to do it
+> **Note** You will need postgresql installed locally see the instructions below to do it
 
 
 ## Installing postgresql
