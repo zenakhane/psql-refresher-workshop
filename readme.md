@@ -12,7 +12,7 @@ The aim of this workshop is to:
 
 You should be able to run sql `insert, update, delete & select` queries on the database.
 
-> *Note:* we assume you already know some SQL but need a bit of a refresher.
+> *Note:* we assume you already know some SQL but need a bit of a refresher. And yes PostgreSQL might be new to you as well.
 
 Here are some sql statement examples:
 
