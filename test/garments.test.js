@@ -2,8 +2,6 @@ const PgPromise = require("pg-promise")
 const assert = require("assert");
 const fs = require("fs");
 
-const expectedGarments = require("./garments");
-
 require('dotenv').config()
 
 describe('As part of the sql refresh workshop', () => {
