@@ -101,6 +101,9 @@ Create the garment table in the new database using the `\i sql/garment.sql` comm
 
 To create a local postgresql database follow the instructions below.
 
+> **Note:** only follow the instructions below if you would like to add a local PostgreSQL database instance. You can skip this initially if you are using an elephantsql.com database instance for example.
+
+
 Connect to the database using the postgresql user:
 
 ```
