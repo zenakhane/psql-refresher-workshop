@@ -1,9 +1,23 @@
 # psql refresh workshop
 
+Fix all the failing tests. An refresh your sql knowledge in the process.
+
+Install all the project dependencies using this command:
+
+```
+npm install
+```
+
+Run the tests using:
+
+```
+npm test
+```
+
+> **Note** You will need postgresql installed locally see the instructions below to do it
+
 
 PostgreSQL refresh workshop - postgresql is a modern sql database.
-
-
 
 
 To be able to to this workshop you will need `psql` installed on your PC,
@@ -25,27 +39,6 @@ insert into garment (description, username, email, password, first_name, last_na
 
 select gender, count(*) group by gender
 ```
-
-## Run the tests, fix them
-
-
-Install all the project dependencies using this command:
-
-```
-npm install
-```
-
-Run the tests using:
-
-```
-npm test
-```
-
-Fix all the failing tests. An refresh your sql knowledge in the process.
-
-> **Note** You will need postgresql installed locally see the instructions below to do it
-
-
 ## Installing postgresql
 
 ### Installing Postgres on Windows
