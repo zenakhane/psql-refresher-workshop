@@ -81,10 +81,12 @@ db.many(sql, [param1]).then(result => console.log(result));
 ```
 
 Once a database is created click on the database on the Instances screen.
-This will take you to the Details screen - see the url on that page and put it in a `.env` file in the route of your project.
+This will take you to the Details screen - see the url on that page and put it in a `.env` file in the root of your project.
+
+> ***Note:* you will need to create the `.env` file yourself. `touch .env` will do the trick. Or just create an empty text file and rename it to `.env`
 
 ```
-DATABASE_URL=<your db url here>
+DATABASE_URL=<your db url here - without any brackets...>
 ```
 
 Connect to your database using psql in the terminal run this command:
@@ -93,7 +95,7 @@ Connect to your database using psql in the terminal run this command:
 psql <your db url here>
 ```
 
-Create the garment table in the new database using the `\i sql/garments.sql` command in `psql`.
+Create the garment table in the new database using the `\i sql/garment.sql` command in `psql`.
 
 ## Using a local database
 
