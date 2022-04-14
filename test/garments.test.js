@@ -1,6 +1,7 @@
 const PgPromise = require("pg-promise")
 const assert = require("assert");
 const fs = require("fs");
+const { count } = require("console");
 
 require('dotenv').config()
 
@@ -52,7 +53,7 @@ describe('As part of the sql refresh workshop', () => {
 
 	it('you should be able to find all the Winter Male garments', async () => {
 		// change the code statement below
-		const result = await db.one(`select count(*) from garment where season ='Winter' and gender ='Male'`)
+		const result = await db.one(`select count(*),gender from garment where season ='Winter' and gender ='Male' group by gender `)
 
 		// no changes below this line in this function
 		assert.equal(3, result.count);
@@ -61,7 +62,7 @@ describe('As part of the sql refresh workshop', () => {
 	it('you should be able to change a given Male garment to a Unisex garment', async () => {
 
 		// use db.one with an update sql statement
-		const result = await db.none(`update garment set gender ='Unisex' where gender ='Male'`)
+		await db.none(`update garment set gender ='Unisex' where description ='Red hooded jacket'`)
 
 		// write your code above this line
 		
@@ -74,9 +75,12 @@ describe('As part of the sql refresh workshop', () => {
 	it('you should be able to add 2 Male & 3 Female garments', async () => {
 
 		// use db.none - change code below here...
+         await db.none(`insert into garment (description,img,season,gender,price) values ('Golf t-shirt', 'collared-128x128-455119.png', 'Summer', 'Male', '79.24')`)
+		 await db.none(`insert into garment (description,img,season,gender,price) values ('Blue Pants', 'jeans-128x128-455124.png', 'All Seasons', 'Male', '99.99')`)
 
-		const result = await db.many(`insert into garment (id,description,img,season,gender,price) values ($1, $2, $3, $4, $5,$6)
-		`)
+		 await db.none(`insert into garment (description,img,season,gender,price) values ('Orange dress(formal)', 'frock-128x128-455120.png', 'Summer', 'Female', '249.99')`)
+		 await db.none(`insert into garment (description,img,season,gender,price) values ('Red hooded jacket', 'hoodie-128x128-455122.png', 'Winter', 'Female', '299.99')`)
+		 await db.none(`insert into garment (description,img,season,gender,price) values ('Short Skirt(Lime)', 'skirt-128x128-455130.png', 'Summer', 'Female', '199.99')`)
 		// write your code above this line
 
 		const gender_count_sql = 'select count(*) from garment where gender = $1'
@@ -91,7 +95,7 @@ describe('As part of the sql refresh workshop', () => {
 	it('you should be group garments by gender and count them', async () => {
 
 		// and below this line for this function will
-
+            const garmentsGrouped = await db.many(`select count(*) ,gender from garment group by gender `)
 		// write your code above this line
 
 		const expectedResult = [
